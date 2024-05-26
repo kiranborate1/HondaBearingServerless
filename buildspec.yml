@@ -1,0 +1,32 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8.0
+  pre_build:
+    commands:
+      - echo "Starting build..."
+      - dotnet tool install -g Amazon.Lambda.Tools --version 5.10.3
+      - export PATH="$PATH:/root/.dotnet/tools"
+      - dotnet restore
+  build:
+    commands:
+      - echo "Build started on `date`"
+      - dotnet build --configuration Release
+      - dotnet lambda package -o package.zip
+  post_build:
+    commands:
+      - echo Uploading package to S3...
+      - aws s3 cp package.zip s3://hondabearingpackagestorebucket/package.zip
+      - echo "Running tests..."
+      - dotnet test --configuration Release --logger:"console;verbosity=detailed"
+      - echo "Packaging Lambda function..."
+      - dotnet lambda package --configuration Release --output-package build/output.zip
+      - aws cloudformation package --template-file template.yaml --s3-bucket hondabearingpackagestorebucket --output-template-file output/packaged-template.yaml
+      - echo Deploying the CloudFormation stack...
+      - aws cloudformation deploy --template-file output/packaged-template.yaml --stack-name my-serverless-app-stack --capabilities CAPABILITY_IAM --parameter-overrides LambdaS3Bucket=hondabearingpackagestorebucket LambdaS3Key=package.zip LambdaExecutionRoleArn=arn:aws:iam::431311084928:role/lambda_exec_apionlambda2
+
+artifacts:
+  files:
+    - build/output.zip

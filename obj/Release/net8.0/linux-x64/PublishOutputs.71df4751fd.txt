@@ -1,0 +1,14 @@
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\HondaBearingServerless
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\appsettings.Development.json
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\appsettings.json
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\aws-lambda-tools-defaults.json
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\HondaBearingServerless.deps.json
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\HondaBearingServerless.runtimeconfig.json
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\HondaBearingServerless.pdb
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\Amazon.Lambda.APIGatewayEvents.dll
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\Amazon.Lambda.ApplicationLoadBalancerEvents.dll
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\Amazon.Lambda.AspNetCoreServer.dll
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\Amazon.Lambda.Core.dll
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\Amazon.Lambda.Logging.AspNetCore.dll
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\My Folder\HondaBearingServerless\src\HondaBearingServerless\bin\Release\net8.0\publish\HondaBearingServerless.dll
